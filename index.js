@@ -3,7 +3,6 @@ import {
   DeviceEventEmitter, // android
   NativeAppEventEmitter, // ios
   NativeModules,
-  DeviceEventEmitter,
   Platform,
   StyleSheet,
   requireNativeComponent,
