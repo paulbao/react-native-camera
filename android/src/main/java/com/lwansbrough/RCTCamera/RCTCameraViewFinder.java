@@ -125,6 +125,9 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
                     ((ReactContext) getContext()).getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
                             .emit("CameraFaceDetected", faceEvent);
                 }
+            } else {
+                ((ReactContext) getContext()).getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                        .emit("CameraFaceDetected", Arguments.createMap());
             }
         }
 
