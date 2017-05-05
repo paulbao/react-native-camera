@@ -555,6 +555,8 @@ RCT_EXPORT_METHOD(hasFlash:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRej
 
 - (void)captureStill:(NSInteger)target options:(NSDictionary *)options resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject
 {
+    // always use lowest quality
+    self.stillImageOutput.outputSettings = @{AVVideoCodecKey : AVVideoCodecJPEG, AVVideoQualityKey : @0.0f};
     AVCaptureVideoOrientation orientation = options[@"orientation"] != nil ? [options[@"orientation"] integerValue] : self.orientation;
     if (orientation == RCTCameraOrientationAuto) {
         #if TARGET_IPHONE_SIMULATOR
