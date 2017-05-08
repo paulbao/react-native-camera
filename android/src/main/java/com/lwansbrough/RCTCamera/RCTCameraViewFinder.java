@@ -117,6 +117,7 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
                     faceEvent.putInt("faceID", face.id);
                     faceEvent.putBoolean("isFrontCamera", frontCamera);
 
+                    faceEvent.putDouble("score", face.score);
                     faceEvent.putDouble("x", faceRect.left / pixelDensity);
                     faceEvent.putDouble("y", faceRect.top / pixelDensity);
                     faceEvent.putDouble("h", faceRect.height() / pixelDensity);
