@@ -928,6 +928,8 @@ didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL
         @"type": metadata.type,
         @"isFrontCamera": @(isFrontCamera),
         @"faceID": [NSNumber numberWithInteger:transformed.faceID],
+        @"rollAngle": [NSNumber numberWithDouble:transformed.hasRollAngle ? transformed.rollAngle : 0],
+        @"yawAngle": [NSNumber numberWithDouble:transformed.hasYawAngle ? transformed.yawAngle : 0],
         @"x": [NSNumber numberWithDouble:transformed.bounds.origin.x],
         @"y": [NSNumber numberWithDouble:transformed.bounds.origin.y],
         @"h": [NSNumber numberWithDouble:transformed.bounds.size.height],
